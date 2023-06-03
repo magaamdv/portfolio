@@ -1,0 +1,137 @@
+body{
+   overflow-x: hidden;
+}
+
+
+body::-webkit-scrollbar {
+   width: 5px; /* Ширина всего элемента навигации */
+   height: 2px;
+ }
+ 
+ body::-webkit-scrollbar-track {
+   background: #47010100; /* Цвет дорожки */
+ }
+ 
+ body::-webkit-scrollbar-thumb {
+   background-color: rgb(255, 0, 238) ; /* Цвет бегунка */
+   border-radius: 10px; /* Округление бегунка */
+   border: 3px solid rgb(255, 0, 238) ; /* Оформление границ бегунка */
+ }
+
+ ::-moz-selection{
+   background-color:#af02ff3d;
+   color:#191919
+}
+
+::selection{
+   background-color:#ab02ff3d;
+   color:#191919
+}
+
+ /* Начальные стили для элемента, который будет следовать за курсором, в нашем случае небольшой кружок */
+ .follow-cursor {
+   display: block;
+   width: 20px;
+   height: 20px;
+   border: 1px solid #f10dfd;
+   background-color: #f10dfd2b;
+   border-radius: 50%;
+   transform: translateY(-50%) translateX(-50%); /* центрируем кружок */
+   position: absolute; /* задаём абсолютное позиционирование, чтобы элемент не влиял на остальные элементы и его можно было бы позиционировать следом за курсором */
+   z-index: 999; /* чтобы элемент был над остальными элементами */
+   pointer-events: none; /* чтобы сквозь элемент можно было взаимодействовать с элементами, находящимися под ним */
+   transition: width 0.2s, height 0.2s, border-radius 0.2s, background 0.2s, background-color 0.2s;
+ }
+ 
+ /* Активный класс для кружка при наведении на ссылку */
+ .follow-cursor_active {
+   height: 30px;
+   width: 30px;
+   border-width: 1px;
+   background: rgba(221, 13, 253, 0.32);
+ }
+ 
+ /* Скрываем декоративный элемент при ширине браузера меньше 992px */
+ @media (max-width: 991.98px) {
+   .follow-cursor {
+     display: none;
+   }
+ }
+
+ .logo{
+   font-family: 'Montserrat', sans-serif;
+   position: absolute;
+   top: 20px;
+   left: 25px;
+   font-weight: 600;
+   font-size: 25px;
+   color: rgb(66, 60, 60);
+   z-index: 1;
+   width: 50px;
+   height: 40px;
+}
+
+.neon{
+   position: absolute;
+   top: 12px;
+   right: 1px;
+}
+
+
+.video-txt{
+font-family: 'Montserrat', sans-serif;
+position: absolute;
+top: 20px;
+left: 320px;
+font-weight: 800;
+font-size: 30px;
+color: rgb(0, 0, 0);
+z-index: 1;
+}
+
+.video{
+  position: absolute;
+  top: 140px;
+  left: 315px;
+  width: 590px;
+  height: 350px;
+  z-index: 10;
+  object-fit: fill;
+
+}
+
+.ipad{
+  position: absolute;
+  top: 114px;
+  left: 260px;
+  background-color: #dddbdb78;
+  padding: 200px 350px;
+  border-radius: 20px;
+  box-shadow: 1px 0 20px rgb(60, 59, 59);
+}
+
+.ipad-btn{
+  z-index: 11;
+  position: absolute;
+  top: 265px;
+  left: 890px;
+  width: 82px;
+  opacity: 0.7;
+  transition: all 0.15s ease-in-out;
+  
+}
+
+.ipad-btn:hover{
+  opacity: 0.4;
+}
+
+.ipad-camera{
+  position: absolute;
+  top: 290px;
+  left: 285px;
+  padding: 4px 4px;
+  background-color: black;
+  border-radius: 50%;
+  opacity: 0.9;
+}
+
