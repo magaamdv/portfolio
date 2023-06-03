@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+ent.addEventListener('DOMContentLoaded', () => {
 
    const followCursor = () => { // объявляем функцию followCursor
      const el = document.querySelector('.follow-cursor') // ищем элемент, который будет следовать за курсором
@@ -22,15 +22,3 @@ document.addEventListener('DOMContentLoaded', () => {
  
  })
  
-
- const anchors = document.querySelectorAll('a[href^="#"]');
-
-anchors.forEach(anchor => {
-   const scrollElementId = anchor.getAttribute('href').split('#')[1],
-         scrollElement = document.getElementById(scrollElementId);
-
-   anchor.addEventListener('click', e => {
-       e.preventDefault();
-       scrollElement.scrollIntoView({behavior: 'smooth'});
-   });
-});

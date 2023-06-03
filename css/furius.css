@@ -40,7 +40,7 @@ body::-webkit-scrollbar {
    position: absolute; /* задаём абсолютное позиционирование, чтобы элемент не влиял на остальные элементы и его можно было бы позиционировать следом за курсором */
    z-index: 999; /* чтобы элемент был над остальными элементами */
    pointer-events: none; /* чтобы сквозь элемент можно было взаимодействовать с элементами, находящимися под ним */
-   transition: width 0.2s, height 0.2s, border-radius 0.2s, background 0.2s, background-color 0.2s;
+   transition: width 0.21s, height 0.21s, border-radius 0.21s, background 0.21s, background-color 0.21s;
  }
  
  /* Активный класс для кружка при наведении на ссылку */
